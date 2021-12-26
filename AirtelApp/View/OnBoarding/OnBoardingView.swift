@@ -38,7 +38,7 @@ struct OnBoardingView: View {
                             .foregroundColor(.white)
                             .scaledFont(name: .semiBold, size: 16)
                     }
-                    .frame(maxWidth: .infinity,maxHeight: 52)
+                    .frame(maxWidth: .infinity,maxHeight: 42)
                     .background (
                         RoundedRectangle(cornerRadius: 4)
                             .stroke(Color.white)
@@ -54,7 +54,7 @@ struct OnBoardingView: View {
                             .foregroundColor(Color(hex: .primaryColor))
                             .scaledFont(name: .semiBold, size: 16)
                     }
-                    .frame(maxWidth: .infinity,maxHeight: 52)
+                    .frame(maxWidth: .infinity,maxHeight: 42)
                     .background (
                         RoundedRectangle(cornerRadius: 4)
                             .fill(Color.white)
@@ -161,14 +161,13 @@ struct OnBoardingView: View {
                             .foregroundColor(Color.white)
                             .scaledFont(name: .semiBold, size: 16)
                     }
-                    .frame(maxWidth: .infinity,maxHeight: 52)
+                    .frame(maxWidth: .infinity,maxHeight: 42)
                     .background (
                         RoundedRectangle(cornerRadius: 4)
                             .fill(Color(hex: .primaryColor))
                     )
                     .padding(.top, 15)
                 }
-                .padding(.leading)
                 .padding(.top)
                 .frame(maxWidth: .infinity,alignment: .leading)
                 .padding(.bottom)
@@ -291,94 +290,95 @@ struct OnBoardingView: View {
         ZStack(alignment: .bottom) {
             Color.black.opacity(0.2)
                 .edgesIgnoringSafeArea(.all)
-            VStack {
-                VStack(alignment: .leading,spacing: 6) {
-                    Text("Signup")
-                        .foregroundColor(Color(hex: .primaryColor))
-                        .scaledFont(name: .medium, size: 24)
-                    
-                    Text("Register with  airtel account number, to start your account !")
-                        .foregroundColor(Color(hex: .grayColor))
-                        .scaledFont(name: .regular, size: 12)
-                }
-                .padding(.leading)
-                .padding(.top)
-                .frame(maxWidth: .infinity,alignment: .leading)
-                
-                VStack(alignment: .leading,spacing: 15) {
-                    
-                    TextField("Mobile Number", text: $onBoaringViewModel.mobileNumber)
-                        .keyboardType(.numberPad)
-                        .padding()
-                        .background(Color(hex: .blueLightColor).cornerRadius(4))
-                    
-                    TextField("NIC number", text: $onBoaringViewModel.nicNumber)
-                        .keyboardType(.numbersAndPunctuation)
-                        .padding()
-                        .background(Color(hex: .blueLightColor).cornerRadius(4))
-                    
-                    
-                    TextField("Email address", text: $onBoaringViewModel.email)
-                        .keyboardType(.emailAddress)
-                        .padding()
-                        .background(Color(hex: .blueLightColor).cornerRadius(4))
-                    
-                    
-                    SecureField("Password", text: $onBoaringViewModel.password)
-                        .padding()
-                        .background(Color(hex: .blueLightColor).cornerRadius(4))
-                    
-                    SecureField("Confirm password", text: $onBoaringViewModel.confirmPassword)
-                        .padding()
-                        .background(Color(hex: .blueLightColor).cornerRadius(4))
-                    
-                    
-                    HStack {
-                        Button {
-                            withAnimation {
-                                onBoaringViewModel.isAcceptCondition.toggle()
-                            }
-                        } label: {
-                            Image(onBoaringViewModel.isAcceptCondition ? "termsChecked" : "termsUnChecked")
-                        }
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack {
+                    VStack(alignment: .leading,spacing: 6) {
+                        Text("Signup")
+                            .foregroundColor(Color(hex: .primaryColor))
+                            .scaledFont(name: .medium, size: 24)
                         
-                        Text("Terms & conditions")
-                            .foregroundColor(Color(hex: .boldGrayColor))
+                        Text("Register with  airtel account number, to start your account !")
+                            .foregroundColor(Color(hex: .grayColor))
                             .scaledFont(name: .regular, size: 12)
-                            .onTapGesture {
+                    }
+                    .padding(.leading)
+                    .padding(.top)
+                    .frame(maxWidth: .infinity,alignment: .leading)
+                    
+                    VStack(alignment: .leading,spacing: 15) {
+                        
+                        TextField("Mobile Number", text: $onBoaringViewModel.mobileNumber)
+                            .keyboardType(.numberPad)
+                            .padding()
+                            .background(Color(hex: .blueLightColor).cornerRadius(4))
+                        
+                        TextField("NIC number", text: $onBoaringViewModel.nicNumber)
+                            .keyboardType(.numbersAndPunctuation)
+                            .padding()
+                            .background(Color(hex: .blueLightColor).cornerRadius(4))
+                        
+                        
+                        TextField("Email address", text: $onBoaringViewModel.email)
+                            .keyboardType(.emailAddress)
+                            .padding()
+                            .background(Color(hex: .blueLightColor).cornerRadius(4))
+                        
+                        
+                        SecureField("Password", text: $onBoaringViewModel.password)
+                            .padding()
+                            .background(Color(hex: .blueLightColor).cornerRadius(4))
+                        
+                        SecureField("Confirm password", text: $onBoaringViewModel.confirmPassword)
+                            .padding()
+                            .background(Color(hex: .blueLightColor).cornerRadius(4))
+                        
+                        
+                        HStack {
+                            Button {
                                 withAnimation {
                                     onBoaringViewModel.isAcceptCondition.toggle()
                                 }
+                            } label: {
+                                Image(onBoaringViewModel.isAcceptCondition ? "termsChecked" : "termsUnChecked")
                             }
-                    }
-                    .padding(.top, 6)
-                    
-                    Button(action: {
-                        withAnimation {
-                            onBoaringViewModel.changeAlertType(with: .noThing)
+                            
+                            Text("Terms & conditions")
+                                .foregroundColor(Color(hex: .boldGrayColor))
+                                .scaledFont(name: .regular, size: 12)
+                                .onTapGesture {
+                                    withAnimation {
+                                        onBoaringViewModel.isAcceptCondition.toggle()
+                                    }
+                                }
                         }
-                    }) {
-                        Text("SIGN up")
-                            .foregroundColor(Color.white)
-                            .scaledFont(name: .semiBold, size: 16)
+                        .padding(.top, 6)
+                        
+                        Button(action: {
+                            withAnimation {
+                                onBoaringViewModel.changeAlertType(with: .noThing)
+                            }
+                        }) {
+                            Text("SIGN up")
+                                .foregroundColor(Color.white)
+                                .scaledFont(name: .semiBold, size: 16)
+                        }
+                        .frame(maxWidth: .infinity,minHeight: 42)
+                        .background (
+                            RoundedRectangle(cornerRadius: 4)
+                                .fill(Color(hex: .primaryColor))
+                        )
+                        .padding(.top, 15)
                     }
-                    .frame(maxWidth: .infinity,maxHeight: 52)
-                    .background (
-                        RoundedRectangle(cornerRadius: 4)
-                            .fill(Color(hex: .primaryColor))
-                    )
-                    .padding(.top, 15)
+                    .padding(.top)
+                    .frame(maxWidth: .infinity,alignment: .leading)
+                    .padding(.bottom)
+                    
                 }
-                .padding(.leading)
-                .padding(.top)
-                .frame(maxWidth: .infinity,alignment: .leading)
-                .padding(.bottom)
-                
+                .padding()
             }
-            .padding()
-            .frame(maxWidth: .infinity,alignment: .leading)
+            .frame(maxWidth: .infinity,maxHeight: 500,alignment: .leading)
             .background(Color.white.clipShape(CustomShape(corner: [.topLeft,.topRight], size: 38)))
-            
+
         }
         .frame(maxWidth: .infinity,maxHeight: .infinity)
         .edgesIgnoringSafeArea(.bottom)
