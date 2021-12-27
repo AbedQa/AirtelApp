@@ -33,9 +33,14 @@ class OnBoardingViewModel: ObservableObject {
 
     @Published var currentLanguage: Languages = .english
     
-    
+    var onFinishOnBoarding: (() -> ())?
     func changeAlertType(with type: AlertType) {
         alertType = type
+        if type == .noThing && isAlertAppear {
+            onFinishOnBoarding?()
+        }
         isAlertAppear.toggle()
+        
+        
     }
 }

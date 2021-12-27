@@ -9,10 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @State var isFinishSplash = false
+    @State var isFinishOnBoardingScreens = false
     var body: some View {
         ZStack {
-            if isFinishSplash {
-                OnBoardingView()
+            if isFinishSplash && !isFinishOnBoardingScreens {
+                OnBoardingView(isFinishOnBoardingScreens: $isFinishOnBoardingScreens)
+            } else if isFinishOnBoardingScreens {
+                MainView()
             } else {
                 SplashView(isFinish: $isFinishSplash)
             }

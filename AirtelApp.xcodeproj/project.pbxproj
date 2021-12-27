@@ -35,6 +35,14 @@
 		390BA0A32778EBD500006E9D /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BA0A22778EBD500006E9D /* OnBoardingView.swift */; };
 		390BA0A62778F51E00006E9D /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BA0A52778F51E00006E9D /* OnBoardingViewModel.swift */; };
 		390BA0A82778F9D600006E9D /* CustomShap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BA0A72778F9D600006E9D /* CustomShap.swift */; };
+		39A6CE7A27798D8D008AE90E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A6CE7927798D8D008AE90E /* MainView.swift */; };
+		39A6CE8027798F19008AE90E /* UsageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A6CE7F27798F19008AE90E /* UsageView.swift */; };
+		39A6CE83277A3478008AE90E /* Usage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A6CE82277A3478008AE90E /* Usage.swift */; };
+		39A6CE86277A3680008AE90E /* PopularPlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A6CE85277A3680008AE90E /* PopularPlansView.swift */; };
+		39A6CE89277A3743008AE90E /* UsageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A6CE88277A3743008AE90E /* UsageViewModel.swift */; };
+		39A6CE8B277A3D7E008AE90E /* OfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A6CE8A277A3D7E008AE90E /* OfferView.swift */; };
+		39A6CE8D277A3EDC008AE90E /* PackagePeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A6CE8C277A3EDC008AE90E /* PackagePeriodView.swift */; };
+		39A6CE8F277A4423008AE90E /* PackageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A6CE8E277A4423008AE90E /* PackageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +76,14 @@
 		390BA0A22778EBD500006E9D /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		390BA0A52778F51E00006E9D /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		390BA0A72778F9D600006E9D /* CustomShap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShap.swift; sourceTree = "<group>"; };
+		39A6CE7927798D8D008AE90E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		39A6CE7F27798F19008AE90E /* UsageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageView.swift; sourceTree = "<group>"; };
+		39A6CE82277A3478008AE90E /* Usage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usage.swift; sourceTree = "<group>"; };
+		39A6CE85277A3680008AE90E /* PopularPlansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularPlansView.swift; sourceTree = "<group>"; };
+		39A6CE88277A3743008AE90E /* UsageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageViewModel.swift; sourceTree = "<group>"; };
+		39A6CE8A277A3D7E008AE90E /* OfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferView.swift; sourceTree = "<group>"; };
+		39A6CE8C277A3EDC008AE90E /* PackagePeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagePeriodView.swift; sourceTree = "<group>"; };
+		39A6CE8E277A4423008AE90E /* PackageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +182,7 @@
 		390BA09B2778E5A400006E9D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				39A6CE7827798D77008AE90E /* Main */,
 				390BA0A42778F50D00006E9D /* OnBoarding */,
 				390BA0A02778E74300006E9D /* SplashView.swift */,
 			);
@@ -179,6 +196,77 @@
 				390BA0A52778F51E00006E9D /* OnBoardingViewModel.swift */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		39A6CE7827798D77008AE90E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				39A6CE7E27798F0F008AE90E /* Profile */,
+				39A6CE7D27798F0B008AE90E /* Modem */,
+				39A6CE7C27798F02008AE90E /* Recharge */,
+				39A6CE7B27798EF0008AE90E /* Usage */,
+				39A6CE7927798D8D008AE90E /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		39A6CE7B27798EF0008AE90E /* Usage */ = {
+			isa = PBXGroup;
+			children = (
+				39A6CE87277A3737008AE90E /* ViewModel */,
+				39A6CE84277A3678008AE90E /* Views */,
+				39A6CE81277A346E008AE90E /* Model */,
+				39A6CE7F27798F19008AE90E /* UsageView.swift */,
+			);
+			path = Usage;
+			sourceTree = "<group>";
+		};
+		39A6CE7C27798F02008AE90E /* Recharge */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Recharge;
+			sourceTree = "<group>";
+		};
+		39A6CE7D27798F0B008AE90E /* Modem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modem;
+			sourceTree = "<group>";
+		};
+		39A6CE7E27798F0F008AE90E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		39A6CE81277A346E008AE90E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39A6CE82277A3478008AE90E /* Usage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39A6CE84277A3678008AE90E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				39A6CE85277A3680008AE90E /* PopularPlansView.swift */,
+				39A6CE8A277A3D7E008AE90E /* OfferView.swift */,
+				39A6CE8C277A3EDC008AE90E /* PackagePeriodView.swift */,
+				39A6CE8E277A4423008AE90E /* PackageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		39A6CE87277A3737008AE90E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				39A6CE88277A3743008AE90E /* UsageViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,11 +358,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				390BA0612778E19600006E9D /* ContentView.swift in Sources */,
+				39A6CE8B277A3D7E008AE90E /* OfferView.swift in Sources */,
+				39A6CE86277A3680008AE90E /* PopularPlansView.swift in Sources */,
+				39A6CE8F277A4423008AE90E /* PackageView.swift in Sources */,
+				39A6CE7A27798D8D008AE90E /* MainView.swift in Sources */,
+				39A6CE8027798F19008AE90E /* UsageView.swift in Sources */,
 				390BA09A2778E48A00006E9D /* FontManager.swift in Sources */,
+				39A6CE83277A3478008AE90E /* Usage.swift in Sources */,
 				390BA0A82778F9D600006E9D /* CustomShap.swift in Sources */,
 				390BA0A62778F51E00006E9D /* OnBoardingViewModel.swift in Sources */,
+				39A6CE89277A3743008AE90E /* UsageViewModel.swift in Sources */,
 				390BA0A32778EBD500006E9D /* OnBoardingView.swift in Sources */,
 				390BA05F2778E19600006E9D /* AirtelAppApp.swift in Sources */,
+				39A6CE8D277A3EDC008AE90E /* PackagePeriodView.swift in Sources */,
 				390BA09D2778E63C00006E9D /* ColorManager.swift in Sources */,
 				390BA0A12778E74300006E9D /* SplashView.swift in Sources */,
 			);

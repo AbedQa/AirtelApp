@@ -11,6 +11,8 @@ struct OnBoardingView: View {
     
     @StateObject var onBoaringViewModel: OnBoardingViewModel = .init()
     
+    @Binding var isFinishOnBoardingScreens: Bool
+    
     var body: some View {
         ZStack {
             VStack {
@@ -182,6 +184,13 @@ struct OnBoardingView: View {
         }
         .frame(maxWidth: .infinity,maxHeight: .infinity)
         .edgesIgnoringSafeArea(.bottom)
+        .onAppear {
+            onBoaringViewModel.onFinishOnBoarding = {
+                withAnimation {
+                    self.isFinishOnBoardingScreens = true
+                }
+            }
+        }
     }
     
     @ViewBuilder
@@ -382,11 +391,5 @@ struct OnBoardingView: View {
         }
         .frame(maxWidth: .infinity,maxHeight: .infinity)
         .edgesIgnoringSafeArea(.bottom)
-    }
-}
-
-struct OnBoardingView_Previews: PreviewProvider {
-    static var previews: some View {
-        OnBoardingView()
     }
 }

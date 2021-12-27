@@ -40,4 +40,6 @@ extension String {
     static var grayColor = "#999999"
     static var blueLightColor = "#F4F8FB"
     static var boldGrayColor = "#333333"
+    static var boldBlueColor = "#009DFF"
+    static var lightGrayColor = "#F7F6FB"
 }
